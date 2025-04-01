@@ -1,3 +1,3 @@
 ## 0.0.1
 
-* TODO: Describe initial release.
+* Ability to add images, onTap, many other parameters for flying_navigation_bar and navigation_bar_item
