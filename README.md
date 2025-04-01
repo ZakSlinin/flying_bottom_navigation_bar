@@ -1,39 +1,57 @@
-<!--
-This README describes the package. If you publish this package to pub.dev,
-this README's contents appear on the landing page for your package.
-
-For information about how to write a good package README, see the guide for
-[writing package pages](https://dart.dev/tools/pub/writing-package-pages).
-
-For general information about developing packages, see the Dart guide for
-[creating packages](https://dart.dev/guides/libraries/create-packages)
-and the Flutter guide for
-[developing packages and plugins](https://flutter.dev/to/develop-packages).
--->
-
-TODO: Put a short description of the package here that helps potential users
-know whether this package might be useful for them.
-
 ## Features
 
-TODO: List what your package can do. Maybe include images, gifs, or videos.
+### flying_bottom_navigation_bar - library for simplified usage of 'flying' bottom navigation bar
 
 ## Getting started
-
-TODO: List prerequisites and provide or point to information on how to
-start using the package.
+```
+flutter pub add flying_bottom_navigation_bar
+```
 
 ## Usage
 
-TODO: Include short and useful examples for package users. Add longer examples
-to `/example` folder.
 
 ```dart
-const like = 'sample';
+import 'package:flutter/material.dart';
+import 'package:flying_bottom_navigation_bar/flying_bottom_navigation_bar.dart';
+
+class MyApp extends StatefulWidget {
+  @override
+  _MyAppState createState() => _MyAppState();
+}
+
+class _MyAppState extends State<MyApp> {
+  int currentIndex = 0;
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(title: Text('Custom Navigation Bar')),
+      body: Center(child: Text('Current Index: $currentIndex')),
+      bottomNavigationBar: FlyingNavigationBar(
+        selectedPageIndex: currentIndex,
+        onTap: (index) {
+          setState(() {
+            currentIndex = index;
+          });
+        },
+        backgroundColor: Colors.white,
+        borderRadius: 30.0,
+        navItems: [
+          NavItem(icon: Icons.home, index: 0, size: 30, label: 'Home', selectedPageIndex: currentIndex, onTap: (index) {}),
+          NavItem(icon: Icons.add, index: 1, size: 30, label: 'Add', selectedPageIndex: currentIndex, onTap: (index) {}),
+          NavItem(icon: Icons.person, index: 2, size: 30, label: 'Profile', selectedPageIndex: currentIndex, onTap: (index) {}),
+        ],
+      ),
+    );
+  }
+}
+
+void main() => runApp(MaterialApp(home: MyApp()));
+
 ```
 
-## Additional information
+## Contact 
 
-TODO: Tell users more about the package: where to find more information, how to
-contribute to the package, how to file issues, what response they can expect
-from the package authors, and more.
+@ZakSln - telegram
+
+slininzahar9@gmail.com

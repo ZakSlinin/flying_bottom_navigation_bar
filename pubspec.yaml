@@ -1,7 +1,7 @@
 name: flying_bottom_navigation_bar
-description: "A new Flutter package project."
+description: "flying_bottom_navigation_bar - library for simplified usage of 'flying' bottom navigation bar"
 version: 1.0.0+1
-homepage:
+homepage: https://github.com/ZakSlinin/flying_bottom_navigation_bar
 
 environment:
   sdk: ^3.8.0-91.0.dev
